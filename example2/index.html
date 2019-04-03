@@ -7,16 +7,34 @@
 </head>
   <body>
     <h1>Hi, there!</h1>
+    <h2>capitalize me now!</h2> 
   </body>
 </html>
 
 <script>
-  console.log("Hello, there! :-)")
-  console.log("---THIS IS A SIMPLE LOOP ---")
-  var my_list = [1, 2, 3];
-  for (i=0; i < my_list.length; i++) {
-      console.log(my_list[i]);
-    }
-  //insert your code here
+  //Sentance to capitalize
+  var str = 'capitaLiZe Me NOw!'
+  
+  //Make every letter lowercase, then split string into single words
+  str = str.toLowerCase().split(' ')
+  
+  //Loop through the words, select first letter, Capitalize it.
+  for (var i=0; i<str.length; i++){
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+  }
 
+  //Join the split mess you've made.
+  str = str.join(' ')
+  
+  //log result to console
+  console.log(str)
 </script>
+
+// console.log("Hello, there! :-)")
+// console.log("---THIS IS A SIMPLE LOOP ---")
+// var my_list = [1, 2, 3];
+// for (i=0; i < my_list.length; i++) {
+//     console.log(my_list[i]);
+//   }
+// //insert your code here
+

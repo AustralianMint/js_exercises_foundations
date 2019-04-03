@@ -1,11 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   function createParagraph() {
-      var paragraphEl = document.createElement('p');
-      paragraphEl.textContent = 'You clicked the button!';
-      document.getElementById("main").appendChild(paragraphEl);
+      let paragraph = document.createElement('p');
+      paragraph.textContent = 'You clicked the button!';
+      if (document.querySelector('p') == null) {
+        document.getElementById("main").appendChild(paragraph);
+        console.log("The button was pressed. 'p' was added!")
+      } else {
+        alert("You can only create one paragraph!")
+      }
   }
-    var buttonEl = document.querySelector('button')
-    buttonEl.addEventListener('click', createParagraph);
-
+    document.addEventListener('click', createParagraph);
 });
